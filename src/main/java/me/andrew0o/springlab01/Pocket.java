@@ -9,6 +9,7 @@ public class Pocket {
     public Pocket(int height, int width) {
         this.height = height;
         this.width = width;
+        System.out.println("Pocket bean is created");
     }
 
     public Item getItem() {
@@ -29,13 +30,5 @@ public class Pocket {
 
     public int getHeight() {
         return height;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 }

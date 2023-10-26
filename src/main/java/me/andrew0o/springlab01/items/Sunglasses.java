@@ -1,7 +1,8 @@
 package me.andrew0o.springlab01.items;
 
 public class Sunglasses extends Item {
-    public Sunglasses(String name, int width, int height) {
-        super(name, width, height);
+    public Sunglasses(String name, int height, int width) {
+        super(name, height, width);
+        System.out.println("Sunglasses bean is created");
     }
 }

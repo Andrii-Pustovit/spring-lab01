@@ -1,13 +1,19 @@
 package me.andrew0o.springlab01.items;
 
 public abstract class Item {
-    private String name;
-    private int height, width;
+    private final String name;
+    private final int height;
+    private final int width;
 
     public Item(String name, int height, int width) {
         this.name = name;
         this.height = height;
         this.width = width;
+//        System.out.println("\tItem constructor is called");
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getHeight() {

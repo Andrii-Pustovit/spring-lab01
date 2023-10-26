@@ -1,7 +1,12 @@
 package me.andrew0o.springlab01;
 
 import me.andrew0o.springlab01.equipment.Equipment;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Character {
     private String name;
     private Equipment head;
@@ -9,12 +14,14 @@ public class Character {
     private Equipment legs;
 
     public Character() {
+        System.out.println("Character bean is created");
     }
 
     public String getName() {
         return name;
     }
 
+    @Value("${player.name}")
     public void setName(String name) {
         this.name = name;
     }
@@ -23,6 +30,8 @@ public class Character {
         return head;
     }
 
+    @Autowired
+    @Qualifier("helmet")
     public void setHead(Equipment head) {
         this.head = head;
     }
@@ -31,6 +40,8 @@ public class Character {
         return body;
     }
 
+    @Autowired
+    @Qualifier("vest")
     public void setBody(Equipment body) {
         this.body = body;
     }
@@ -39,6 +50,8 @@ public class Character {
         return legs;
     }
 
+    @Autowired
+    @Qualifier("pants")
     public void setLegs(Equipment legs) {
         this.legs = legs;
     }

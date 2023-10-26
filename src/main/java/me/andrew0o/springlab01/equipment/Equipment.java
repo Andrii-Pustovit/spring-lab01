@@ -5,10 +5,7 @@ import me.andrew0o.springlab01.Pocket;
 public abstract class Equipment {
     private Pocket pocket;
     public Equipment() {
-    }
-
-    public Equipment(Pocket pocket) {
-        this.pocket = pocket;
+//        System.out.println("\tEquipment constructor is called");
     }
     public Pocket getPocket() {
         return pocket;
