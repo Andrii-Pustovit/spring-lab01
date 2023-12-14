@@ -3,11 +3,11 @@ package me.andrew0o.springlab01;
 import me.andrew0o.springlab01.items.Item;
 import me.andrew0o.springlab01.items.Sunglasses;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 
 @Configuration
+@EnableAspectJAutoProxy
+@ComponentScan("me.andrew0o.springlab01")
 @PropertySource("classpath:application.properties")
 public class Config {
     @Value("${small_pocket.height}")
